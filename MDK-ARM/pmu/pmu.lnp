@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"pmu\startup_stm32f103xb.o"
+"pmu\main.o"
+"pmu\gpio.o"
+"pmu\spi.o"
+"pmu\stm32f1xx_it.o"
+"pmu\stm32f1xx_hal_msp.o"
+"pmu\stm32f1xx_hal_gpio_ex.o"
+"pmu\stm32f1xx_hal_spi.o"
+"pmu\stm32f1xx_hal.o"
+"pmu\stm32f1xx_hal_rcc.o"
+"pmu\stm32f1xx_hal_rcc_ex.o"
+"pmu\stm32f1xx_hal_gpio.o"
+"pmu\stm32f1xx_hal_dma.o"
+"pmu\stm32f1xx_hal_cortex.o"
+"pmu\stm32f1xx_hal_pwr.o"
+"pmu\stm32f1xx_hal_flash.o"
+"pmu\stm32f1xx_hal_flash_ex.o"
+"pmu\stm32f1xx_hal_exti.o"
+"pmu\stm32f1xx_hal_tim.o"
+"pmu\stm32f1xx_hal_tim_ex.o"
+"pmu\system_stm32f1xx.o"
+--strict --scatter "pmu\pmu.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "pmu.map" -o pmu\pmu.axf
